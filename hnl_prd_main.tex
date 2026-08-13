@@ -1066,7 +1066,7 @@ Following this, in \cref{sec:generator}, we describe the new event generator, us
 Here also the detector response simulation and the HNL event re-weighting scheme are discussed.
 In \cref{sec:filter_and_reco}, we describe the filtering steps leading to a neutrino-dominated analysis sample, including the reconstruction used in the analysis.
 In particular, we explore the performance of reconstructing low-energy double-cascades with traditional likelihood methods and the resulting capability to identify them.
-We find that the identification of these events against the background is challenging, leading a substantial difference between the model parameter space range where a single event is expected~\cite{Coloma:2017ppo, Boiarska:2021yho} to and our resulting limits.
+We find that the identification of these events against the background is challenging, leading to a substantial difference between the model parameter space range where a single event is expected~\cite{Coloma:2017ppo, Boiarska:2021yho} and our resulting limits.
 In \cref{sec:analysis_methods,sec:results}, we describe the analysis methods and the results, respectively. 
 % we describe the analysis methods and in \cref{sec:results} we present the results of this work.
 Finally, in \cref{sec:conclusion} we conclude and discuss prospects for future HNL searches in IceCube.
@@ -1102,7 +1102,7 @@ However, given the sparse arrangement of the detector modules and the energy det
 This means that the majority of HNL events, which theoretically produce double-cascades, actually appear in the atmospheric neutrino sample as a shift in the energy and zenith distributions of events looking like cascades. Additionally, a small subset of events appear with a signature composed of two cascades. This distinctive signature is unique at low energies (in the 10s of GeV), and will from here on be referred to as \textit{low-energy double-cascade} signature.
 %They effectively appear as a shift in the energy and zenith distribution of the cascade component of the sample, accompanied by a small subset of events with a signature composed of two cascades. This distinctive signature is unique at low energies (in the 10s of GeV), and will from here on be referred to as \textit{low-energy double-cascade} signature.
 
-An essential part of this work was the development of an event generator, which was extensively used to study the signal of HNLs in IceCube, crucially factoring in the realistic detector response.
+An essential part of this work was the development of an event generator to study the signal of HNLs in IceCube with a realistic detector response.
 The generator~\cite{LeptonInjector-HNL} is published as an open-source tool to produce HNL events for atmospheric neutrino detectors. 
 Based on the generated events, the performance of detecting and identifying HNLs via the double-cascade channel was investigated, but despite this morphology being unique to HNLs, it is not currently possible to observe and correctly identify it, given the large background of SM neutrino events.
 As an alternative avenue and serving as a \textit{proof-of-principle} search for HNLs in IceCube, the shifts in cascade-like events stemming from HNLs, compared to the expectation from SM interactions only, is used to perform a first measurement of \ut4 for three masses with ten years of data from the IceCube DeepCore sub-array~\cite{IceCube:2011ucd}.
@@ -1189,7 +1189,9 @@ Specifically, LI uses \textsc{Photospline}~\cite{Whitehorn:2013nh} to produce b-
 For this work, \textsc{NuXSSplMkr} was modified to produce the $\nu_\tau+N \to \nu_4+X$ cross-sections by adding a kinematic condition to the $\nu_\tau$ interaction which ensures there is enough energy to produce the outgoing heavy mass particle, $\nu_4$.
 This is the same kinematic condition used in the $\nu_\tau$-CC process, which ensures that sufficient energy is present to produce the massive charged lepton~\cite{Levy:2004rk}.
 Compared to the SM cross-section, the additional kinematic condition reduces the cross-section at lower energies, where the energy available to produce the HNL is more often lower than the HNL mass.
-This is shown in \cref{fig:total_cross_section}, where the cross-sections generated for this analysis are compared to the SM NC cross-sections calculated using \textsc{GENIE}~\cite{Andreopoulos:2009rq}.
+This is shown in \cref{fig:total_cross_section}, where the cross-sections generated for this analysis are compared to the SM NC cross sections calculated using \textsc{GENIE}~\cite{Andreopoulos:2009rq}.
+We note here that due to differences between the \textsc{GENIE} and \textsc{NuXSSplMkr} cross section models, the HNL production cross section at low energies and HNL masses can slightly exceed the SM NC cross section in \cref{fig:total_cross_section}.
+While this is not physical, it is a small effect and is covered by a dedicated DIS systematic parameter assigned to the difference between the two cross section models described in \cref{sec:uncertainties}.
 
 \begin{figure}[h]
     \centering
@@ -1329,6 +1331,8 @@ Here $\hbar$ is the reduced Planck constant, $\Gamma_\mathrm{total}(m_4, \nomath
 \cref{fig:hnl_decay_feynman_lengths} illustrates the mean decay length for the example mass of $m_4=\SI{0.6}{\gev}$ and some selected mixing values as a function of the kinetic energy of the HNL.
 Applying all weights transforms the generated event distributions into a physical interaction rate in the detector.
 
+We note that the weighting scheme of \textsc{LI-HNL} does not account for modifications to the neutral current potential experienced by atmospheric neutrinos traversing the Earth in the presence of nonzero $|U_{\tau 4}|^2$.
+This can modify the $\nu_\mu \to \nu_\tau$ oscillation probability, though the effect is expected to be sub-leading~\cite{Sahoo:2023mpj} and will therefore not change the conclusions of this article.
 
 
 %%%%%%%%%%%%%%%%%%%% Event Filtering and Reconstruction %%%%%%%%%%%%%%%%%%%%
@@ -1440,10 +1444,12 @@ The selection criteria are listed in \cref{tab:analysis_cuts} and their applicat
     \textbf{Type} & \textbf{Rate [\si{\milli\hertz}]} & \textbf{Events (\SI{9.28}{years})} \\
     \hline\hline
     $\nu_\mu^\rm{CC}$   & 0.3531 & 103321 $\pm$ 113 \\
-    $\nu_e^\rm{CC}$     & 0.1418 & 41490 $\pm$ 69 \\
-    $\nu^\rm{NC}$       & 0.0666 & 19491 $\pm$ 47 \\
-    $\nu_\tau^\rm{CC}$  & 0.0345 & 10094 $\pm$ 22 \\
-    $\mu_\rm{atm}$      & 0.0032 & 936 $\pm$ 15 \\
+    $\nu_e^\rm{CC}$     & 0.1418 & 41490  $\pm$ 69 \\
+    $\nu_\tau^\rm{CC}$  & 0.0345 & 10094  $\pm$ 22 \\
+    $\nu_\mu^\rm{NC}$   & 0.0443 & 12965  $\pm$ 42 \\
+    $\nu_e^\rm{NC}$     & 0.0110 & 3213   $\pm$ 18 \\
+    $\nu_\tau^\rm{NC}$  & 0.0113 & 3313   $\pm$ 13 \\
+    $\mu_\rm{atm}$      & 0.0032 & 936    $\pm$ 15 \\
     \hline
     total               & 0.5992 & 175332 $\pm$ 143 \\
     \hline
@@ -1455,8 +1461,8 @@ The selection criteria are listed in \cref{tab:analysis_cuts} and their applicat
 \end{table}
 
 \begin{figure}[h]
-\includegraphics[width=\columnwidth]{signal_rates_and_events.png}
-\caption{HNL rates and event expectations for all three masses at final level of the event selection.}
+\includegraphics[width=\columnwidth]{rates_with_nutaunc.pdf}
+\caption{HNL rates and event expectations for all three masses at final level of the event selection, as well as the $\nu_{\tau}$ NC rate at final level. Note that the maximum $\nu_{\tau}$ rate does not meet the maximum HNL rate - this is due to the greater selection efficiency for HNLs at final level. }
 \label{fig:signal_expecations}
 \end{figure}
 
@@ -1466,9 +1472,12 @@ The selection criteria are listed in \cref{tab:analysis_cuts} and their applicat
 To enhance the sensitivity to the HNLs' specific event signature, we further divide the events based on three reconstructed variables.
 There are twelve bins in reconstructed energy, eight bins in cosine of the reconstructed zenith angle, and three bins in PID, which correspond to track-like ($\mathrm{PID} > 0.55$), mixed ($0.25 < \mathrm{PID} < 0.55$), and cascade-like ($\mathrm{PID} < 0.25$) morphologies.
 The binning scheme is summarized in \cref{tab:analysis_binning} and is identical to the binning used in Ref.~\cite{IceCube:2024xjj}.
-The nominal background expectation in these bins is shown in  \cref{fig:background_3d_hist}.
+The nominal background expectation in these bins is shown in \cref{fig:background_3d_hist}.
+The background is evaluated at $|U_{\tau 4}|^2=0$.
+Note that the $\nu_\tau$ NC component of the background reduces for $|U_{\tau 4}|^2>0$, as shown in \cref{fig:signal_expecations}; however, this is a sufficiently small component of the overall background compared to the $\nu_\mu$ and $\nu_e$ components that the total background distribution is nearly independent of $|U_{\tau 4}|^2$.
+
 During the binning scheme development we found that some lower energy bins in the cascade-like PID bin have small expected numbers of events, and can not be adequately described by Gaussian statistics.
-These bins are therefore removed from the analysis and illustrated in dark green in \cref{fig:background_3d_hist} and all similar figures that follow. The data observed in \SI{9.28}{years} of live time, binned in the same scheme, is shown in \cref{fig:data_3d_hist}
+These bins are therefore removed from the analysis and illustrated in dark green in \cref{fig:background_3d_hist} and all similar figures that follow. The data observed in \SI{9.28}{years} of live time, binned in the same scheme, is shown in \cref{fig:data_3d_hist}.
 
 \begin{figure*}[h]
     \includegraphics[width=\textwidth]{all_background.png}
@@ -1532,6 +1541,11 @@ To compare the bin-wise expectations to the data, a modified $\chi^2$ is used as
     \label{eq:mod-chi2-hnl}
 \end{equation}
 where $N^{\rm{exp}}_i = N^{\mathrm{\nu}}_i + N^{\mathrm{\mu}}_i + N^{\mathrm{HNL}}_i$ is the total event expectation in bin $i$, with $N^{\mathrm{\nu}}_i$, $N^{\mathrm{\mu}}_i$, and $N^{\mathrm{HNL}}_i$ being the expected number of events from neutrinos, atmospheric $\mu$'s, and HNLs, and $N^{\mathrm{obs}}_i$ is the observed number of data events.
+Recall that the mixing matrix element $|U_{\tau 4}|^2$ enters in both the $N_i^{\rm HNL}$ term as well as the $\nu_\tau$ NC component of the background term $N_i^\nu$.
+The latter specifically scales as
+\begin{equation}
+    N_i^{\nu_\tau{\rm NC}}(|U_{\tau 4}|^2) = (1 - |U_{\tau 4}|^2) N_i^{\nu_\tau{\rm NC}}(|U_{\tau 4}|^2 = 0).
+\end{equation}
 Summing the weights of all events of a particular type gives the expected number of events as $N^{\mathrm{type}}_i = \sum_i^\rm{type}\omega_i$, with the statistical uncertainty being $(\sigma^{\mathrm{type}}_i)^2 = \sum_i^\rm{type}\omega_i^2$, which is included in the fit metric to account for the limited MC statistics. A Gaussian penalty is added for each systematic parameter, $s_j$, with a known uncertainty, forming the additional term in \cref{eq:mod-chi2-hnl}. The nominal value of the parameter is given by $\hat{s_j}$, with a prior width of $\sigma_{s_j}$. The systematic uncertainties that are included as nuisance parameters in the fit are discussed in detail in \cref{sec:uncertainties}. Both their nominal values and priors (if applicable) are listed in the first column of \cref{tab:best_fit_parameters}.
 
 To conduct the fit, we use the \textsc{PISA}~\cite{pisa_paper, pisa_software} software framework.
@@ -1631,11 +1645,11 @@ They are all compatible with the null hypothesis (NH) of no mixing, i.e., $\noma
         %\SI{1.0}{\gev} & 0.106 & 0.24 & 0.40 & \SI{0.63}{} \\
        % \hline
         \hline\hline
-       \textbf{HNL mass} & \textbf{\ut4} & \textbf{68\% CL} & \textbf{90\% CL} \\    
+       \textbf{HNL mass} & \textbf{\ut4} & \textbf{68\% CL} & \textbf{90\% CL} & \textbf{NH $p$-value}  \\    
        \hline\hline
-       \SI{0.3}{\gev} & 0.001 & 0.08 & 0.67  \\
-        \SI{0.6}{\gev} & $8 \times 10^{-5}$ & 0.22 & 0.36  \\
-        \SI{1.0}{\gev} & 0.054 & 0.22 & 0.44  \\
+       \SI{0.3}{\gev} & 0.001 & 0.08 & 0.17  & \SI{0.44}{}\\
+        \SI{0.6}{\gev} & $8 \times 10^{-5}$ & 0.22 & 0.36  & \SI{0.39}{}\\
+        \SI{1.0}{\gev} & 0.054 & 0.27 & 0.44 & \SI{0.44}{} \\
        \hline
     \end{tabular}
     \caption{Best-fit mixing values and the corresponding upper limits at the \SI{68}{\percent} and the \SI{90}{\percent} confidence level, as well as the $p$-value to reject the null hypothesis, estimated using Wilks' theorem.}
