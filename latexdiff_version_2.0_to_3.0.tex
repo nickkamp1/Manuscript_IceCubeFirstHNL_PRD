@@ -1,7 +1,7 @@
 \documentclass[
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL hnl_prd_main.tex                                                       Thu Aug 13 15:34:40 2026
-%DIF ADD /Users/nickkamp/Downloads/IceCubeFirstHNL_PRD_v2.0a/hnl_prd_main.tex   Tue Jan 13 09:36:48 2026
+%DIF DEL /Users/nickkamp/Downloads/IceCubeFirstHNL_PRD_v2.0a/hnl_prd_main.tex   Tue Jan 13 09:36:48 2026
+%DIF ADD hnl_prd_main.tex                                                       Thu Aug 13 15:34:40 2026
     aps,
     prd,
     reprint,
@@ -1150,7 +1150,7 @@ Following this, in \cref{sec:generator}, we describe the new event generator, us
 Here also the detector response simulation and the HNL event re-weighting scheme are discussed.
 In \cref{sec:filter_and_reco}, we describe the filtering steps leading to a neutrino-dominated analysis sample, including the reconstruction used in the analysis.
 In particular, we explore the performance of reconstructing low-energy double-cascades with traditional likelihood methods and the resulting capability to identify them.
-We find that the identification of these events against the background is challenging, leading \DIFdelbegin \DIFdel{to }\DIFdelend a substantial difference between the model parameter space range where a single event is expected~\cite{Coloma:2017ppo, Boiarska:2021yho} \DIFaddbegin \DIFadd{to }\DIFaddend and our resulting limits.
+We find that the identification of these events against the background is challenging, leading \DIFaddbegin \DIFadd{to }\DIFaddend a substantial difference between the model parameter space range where a single event is expected~\cite{Coloma:2017ppo, Boiarska:2021yho} \DIFdelbegin \DIFdel{to }\DIFdelend and our resulting limits.
 In \cref{sec:analysis_methods,sec:results}, we describe the analysis methods and the results, respectively. 
 % we describe the analysis methods and in \cref{sec:results} we present the results of this work.
 Finally, in \cref{sec:conclusion} we conclude and discuss prospects for future HNL searches in IceCube.
@@ -1186,7 +1186,7 @@ However, given the sparse arrangement of the detector modules and the energy det
 This means that the majority of HNL events, which theoretically produce double-cascades, actually appear in the atmospheric neutrino sample as a shift in the energy and zenith distributions of events looking like cascades. Additionally, a small subset of events appear with a signature composed of two cascades. This distinctive signature is unique at low energies (in the 10s of GeV), and will from here on be referred to as \textit{low-energy double-cascade} signature.
 %They effectively appear as a shift in the energy and zenith distribution of the cascade component of the sample, accompanied by a small subset of events with a signature composed of two cascades. This distinctive signature is unique at low energies (in the 10s of GeV), and will from here on be referred to as \textit{low-energy double-cascade} signature.
 
-An essential part of this work was the development of an event generator\DIFaddbegin \DIFadd{, which was extensively used }\DIFaddend to study the signal of HNLs in IceCube\DIFdelbegin \DIFdel{with a }\DIFdelend \DIFaddbegin \DIFadd{, crucially factoring in the }\DIFaddend realistic detector response.
+An essential part of this work was the development of an event generator \DIFdelbegin \DIFdel{, which was extensively used }\DIFdelend to study the signal of HNLs in IceCube \DIFdelbegin \DIFdel{, crucially factoring in the }\DIFdelend \DIFaddbegin \DIFadd{with a }\DIFaddend realistic detector response.
 The generator~\cite{LeptonInjector-HNL} is published as an open-source tool to produce HNL events for atmospheric neutrino detectors. 
 Based on the generated events, the performance of detecting and identifying HNLs via the double-cascade channel was investigated, but despite this morphology being unique to HNLs, it is not currently possible to observe and correctly identify it, given the large background of SM neutrino events.
 As an alternative avenue and serving as a \textit{proof-of-principle} search for HNLs in IceCube, the shifts in cascade-like events stemming from HNLs, compared to the expectation from SM interactions only, is used to perform a first measurement of \ut4 for three masses with ten years of data from the IceCube DeepCore sub-array~\cite{IceCube:2011ucd}.
@@ -1273,16 +1273,14 @@ Specifically, LI uses \textsc{Photospline}~\cite{Whitehorn:2013nh} to produce b-
 For this work, \textsc{NuXSSplMkr} was modified to produce the $\nu_\tau+N \to \nu_4+X$ cross-sections by adding a kinematic condition to the $\nu_\tau$ interaction which ensures there is enough energy to produce the outgoing heavy mass particle, $\nu_4$.
 This is the same kinematic condition used in the $\nu_\tau$-CC process, which ensures that sufficient energy is present to produce the massive charged lepton~\cite{Levy:2004rk}.
 Compared to the SM cross-section, the additional kinematic condition reduces the cross-section at lower energies, where the energy available to produce the HNL is more often lower than the HNL mass.
-This is shown in \cref{fig:total_cross_section}, where the cross-sections generated for this analysis are compared to the SM NC \DIFdelbegin \DIFdel{cross sections }\DIFdelend \DIFaddbegin \DIFadd{cross-sections }\DIFaddend calculated using \textsc{GENIE}~\cite{Andreopoulos:2009rq}.
-\DIFdelbegin \DIFdel{We note here that due to differences between the }\textsc{\DIFdel{GENIE}} %DIFAUXCMD
-\DIFdel{and }\textsc{\DIFdel{NuXSSplMkr}} %DIFAUXCMD
-\DIFdel{cross section models, the HNL production cross section at low energies and HNL masses can slightly exceed the SM NC cross section in \mbox{%DIFAUXCMD
+This is shown in \cref{fig:total_cross_section}, where the cross-sections generated for this analysis are compared to the SM NC \DIFdelbegin \DIFdel{cross-sections }\DIFdelend \DIFaddbegin \DIFadd{cross sections }\DIFaddend calculated using \textsc{GENIE}~\cite{Andreopoulos:2009rq}.
+\DIFaddbegin \DIFadd{We note here that due to differences between the }\textsc{\DIFadd{GENIE}} \DIFadd{and }\textsc{\DIFadd{NuXSSplMkr}} \DIFadd{cross section models, the HNL production cross section at low energies and HNL masses can slightly exceed the SM NC cross section in \mbox{%DIFAUXCMD
 \cref{fig:total_cross_section}}\hskip0pt%DIFAUXCMD
 .
 While this is not physical, it is a small effect and is covered by a dedicated DIS systematic parameter assigned to the difference between the two cross section models described in \mbox{%DIFAUXCMD
 \cref{sec:uncertainties}}\hskip0pt%DIFAUXCMD
 .
-}\DIFdelend 
+}\DIFaddend 
 
 \begin{figure}[h]
     \centering
@@ -1327,9 +1325,9 @@ The decay products are calculated in the rest frame of the HNL, and are then boo
 \subsection{Event Generation}
 
 To simulate events, the LI settings have to be specified, which includes selecting the injection mode (ranged or volume), the Earth's density profile, the cross-section model, and the initial and final particle types.
-For this analysis, LI-HNL is run in volume mode, and two generators are used to produce half of the events from $\nu_\tau$ and the other half from $\bar{\nu}_\tau$ as the primary particle. Volume mode injects the primary particles within a cylindrical volume, where the center and the dimension are chosen at runtime. Here, the volume is chosen to be centered in the DeepCore sub-array, and we produce samples with masses of \SI{0.1}{\gev}, \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+For this analysis, LI-HNL is run in volume mode, and two generators are used to produce half of the events from $\nu_\tau$ and the other half from $\bar{\nu}_\tau$ as the primary particle. Volume mode injects the primary particles within a cylindrical volume, where the center and the dimension are chosen at runtime. Here, the volume is chosen to be centered in the DeepCore sub-array, and we produce samples with masses of \SI{0.1}{\gev}, \DIFdelbegin \DIFdel{\mbox{\SI{0.3}{\gev}}}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
 \SI{0.3}{\gev}}\hskip0pt%DIFAUXCMD
-}\DIFdelend \DIFaddbegin \DIFadd{SI}{\DIFadd{0.3}}{\gev}\DIFaddend , \SI{0.6}{\gev}, and \SI{1.0}{\gev}. The 0.1 GeV sample was excluded from the final analysis due to the dominance of the invisible 3-neutrino decay mode, which pushed the vast majority of events simulated below DeepCore’s energy detection threshold.
+}\DIFaddend , \SI{0.6}{\gev}, and \SI{1.0}{\gev}. The 0.1 GeV sample was excluded from the final analysis due to the dominance of the invisible 3-neutrino decay mode, which pushed the vast majority of events simulated below DeepCore’s energy detection threshold.
 
 Both the production and the decay of the HNL are presumed to occur inside the detector, which is achieved by placing the primary interaction point inside the detector and limiting the decay length range to be below the size of the detector, which is $\sim$\SI{1000}{\meter}. The parameters chosen for the sample generation are listed in \cref{tab:sampling_dists}. 
 
@@ -1424,17 +1422,14 @@ Here $\hbar$ is the reduced Planck constant, $\Gamma_\mathrm{total}(m_4, \nomath
 \cref{fig:hnl_decay_feynman_lengths} illustrates the mean decay length for the example mass of $m_4=\SI{0.6}{\gev}$ and some selected mixing values as a function of the kinetic energy of the HNL.
 Applying all weights transforms the generated event distributions into a physical interaction rate in the detector.
 
-
-
-\DIFdelbegin \DIFdel{We note that the weighting scheme of }\textsc{\DIFdel{LI-HNL}} %DIFAUXCMD
-\DIFdel{does not account for modifications to the neutral current potential experienced by atmospheric neutrinos traversing the Earth in the presence of nonzero $|U_{\tau 4}|^2$.
+\DIFaddbegin \DIFadd{We note that the weighting scheme of }\textsc{\DIFadd{LI-HNL}} \DIFadd{does not account for modifications to the neutral current potential experienced by atmospheric neutrinos traversing the Earth in the presence of nonzero $|U_{\tau 4}|^2$.
 This can modify the $\nu_\mu \to \nu_\tau$ oscillation probability, though the effect is expected to be sub-leading~\mbox{%DIFAUXCMD
 \cite{Sahoo:2023mpj} }\hskip0pt%DIFAUXCMD
 and will therefore not change the conclusions of this article.
-}%DIFDELCMD < 
+}
 
-%DIFDELCMD < %%%
-\DIFdelend %%%%%%%%%%%%%%%%%%%% Event Filtering and Reconstruction %%%%%%%%%%%%%%%%%%%%
+
+\DIFaddend %%%%%%%%%%%%%%%%%%%% Event Filtering and Reconstruction %%%%%%%%%%%%%%%%%%%%
 
 \section{\label{sec:filter_and_reco}Event Filtering and Reconstruction}
 
@@ -1543,22 +1538,16 @@ The selection criteria are listed in \cref{tab:analysis_cuts} and their applicat
     \textbf{Type} & \textbf{Rate [\si{\milli\hertz}]} & \textbf{Events (\SI{9.28}{years})} \\
     \hline\hline
     $\nu_\mu^\rm{CC}$   & 0.3531 & 103321 $\pm$ 113 \\
-    $\nu_e^\rm{CC}$     & 0.1418 & 41490 $\pm$ 69 \\
-    \DIFaddbeginFL \DIFaddFL{$\nu^\rm{NC}$       }& \DIFaddFL{0.0666 }& \DIFaddFL{19491 $\pm$ 47 }\\
-    \DIFaddendFL $\nu_\tau^\rm{CC}$  & 0.0345 & 10094 $\pm$ 22 \\
-    \DIFdelbeginFL \DIFdelFL{$\nu_\mu^\rm{NC}$   }%DIFDELCMD < & %%%
-\DIFdelFL{0.0443 }%DIFDELCMD < & %%%
-\DIFdelFL{12965  $\pm$ 42 }%DIFDELCMD < \\
+    $\nu_e^\rm{CC}$     & 0.1418 & 41490  $\pm$ 69 \\
+    \DIFdelbeginFL \DIFdelFL{$\nu^\rm{NC}$       }%DIFDELCMD < & %%%
+\DIFdelFL{0.0666 }%DIFDELCMD < & %%%
+\DIFdelFL{19491 $\pm$ 47 }%DIFDELCMD < \\
 %DIFDELCMD <     %%%
-\DIFdelFL{$\nu_e^\rm{NC}$     }%DIFDELCMD < & %%%
-\DIFdelFL{0.0110 }%DIFDELCMD < & %%%
-\DIFdelFL{3213   $\pm$ 18 }%DIFDELCMD < \\
-%DIFDELCMD <     %%%
-\DIFdelFL{$\nu_\tau^\rm{NC}$  }%DIFDELCMD < & %%%
-\DIFdelFL{0.0113 }%DIFDELCMD < & %%%
-\DIFdelFL{3313   $\pm$ 13 }%DIFDELCMD < \\
-%DIFDELCMD <     %%%
-\DIFdelendFL $\mu_\rm{atm}$      & 0.0032 & 936 $\pm$ 15 \\
+\DIFdelendFL $\nu_\tau^\rm{CC}$  & 0.0345 & 10094  $\pm$ 22 \\
+    \DIFaddbeginFL \DIFaddFL{$\nu_\mu^\rm{NC}$   }& \DIFaddFL{0.0443 }& \DIFaddFL{12965  $\pm$ 42 }\\
+    \DIFaddFL{$\nu_e^\rm{NC}$     }& \DIFaddFL{0.0110 }& \DIFaddFL{3213   $\pm$ 18 }\\
+    \DIFaddFL{$\nu_\tau^\rm{NC}$  }& \DIFaddFL{0.0113 }& \DIFaddFL{3313   $\pm$ 13 }\\
+    \DIFaddendFL $\mu_\rm{atm}$      & 0.0032 & 936    $\pm$ 15 \\
     \hline
     total               & 0.5992 & 175332 $\pm$ 143 \\
     \hline
@@ -1570,10 +1559,10 @@ The selection criteria are listed in \cref{tab:analysis_cuts} and their applicat
 \end{table}
 
 \begin{figure}[h]
-\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\columnwidth]{rates_with_nutaunc.pdf}
+\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\columnwidth]{signal_rates_and_events.png}
 %DIFDELCMD < %%%
-\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\columnwidth]{signal_rates_and_events.png}
-\DIFaddendFL \caption{HNL rates and event expectations for all three masses at final level of the event selection\DIFdelbeginFL \DIFdelFL{, as well as the $\nu_{\tau}$ NC rate at final level}\DIFdelendFL .\DIFdelbeginFL \DIFdelFL{Note that the maximum $\nu_{\tau}$ rate does not meet the maximum HNL rate - this is due to the greater selection efficiency for HNLs at final level. }\DIFdelendFL }
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\columnwidth]{rates_with_nutaunc.pdf}
+\DIFaddendFL \caption{HNL rates and event expectations for all three masses at final level of the event selection\DIFaddbeginFL \DIFaddFL{, as well as the $\nu_{\tau}$ NC rate at final level}\DIFaddendFL . \DIFaddbeginFL \DIFaddFL{Note that the maximum $\nu_{\tau}$ rate does not meet the maximum HNL rate - this is due to the greater selection efficiency for HNLs at final level. }\DIFaddendFL }
 \label{fig:signal_expecations}
 \end{figure}
 
@@ -1583,18 +1572,16 @@ The selection criteria are listed in \cref{tab:analysis_cuts} and their applicat
 To enhance the sensitivity to the HNLs' specific event signature, we further divide the events based on three reconstructed variables.
 There are twelve bins in reconstructed energy, eight bins in cosine of the reconstructed zenith angle, and three bins in PID, which correspond to track-like ($\mathrm{PID} > 0.55$), mixed ($0.25 < \mathrm{PID} < 0.55$), and cascade-like ($\mathrm{PID} < 0.25$) morphologies.
 The binning scheme is summarized in \cref{tab:analysis_binning} and is identical to the binning used in Ref.~\cite{IceCube:2024xjj}.
-The nominal background expectation in these bins is shown in  \cref{fig:background_3d_hist}.
-\DIFdelbegin \DIFdel{The background is evaluated at $|U_{\tau 4}|^2=0$.
+The nominal background expectation in these bins is shown in \cref{fig:background_3d_hist}.
+\DIFaddbegin \DIFadd{The background is evaluated at $|U_{\tau 4}|^2=0$.
 Note that the $\nu_\tau$ NC component of the background reduces for $|U_{\tau 4}|^2>0$, as shown in \mbox{%DIFAUXCMD
 \cref{fig:signal_expecations}}\hskip0pt%DIFAUXCMD
 ; however, this is a sufficiently small component of the overall background compared to the $\nu_\mu$ and $\nu_e$ components that the total background distribution is nearly independent of $|U_{\tau 4}|^2$.
-}%DIFDELCMD < 
+}
 
-%DIFDELCMD < %%%
-\DIFdelend During the binning scheme development we found that some lower energy bins in the cascade-like PID bin have small expected numbers of events, and can not be adequately described by Gaussian statistics.
-These bins are therefore removed from the analysis and illustrated in dark green in \cref{fig:background_3d_hist} and all similar figures that follow. The data observed in \SI{9.28}{years} of live time, binned in the same scheme, is shown in \cref{fig:data_3d_hist}
-\DIFdelbegin \DIFdel{.
-}\DIFdelend 
+\DIFaddend During the binning scheme development we found that some lower energy bins in the cascade-like PID bin have small expected numbers of events, and can not be adequately described by Gaussian statistics.
+These bins are therefore removed from the analysis and illustrated in dark green in \cref{fig:background_3d_hist} and all similar figures that follow. The data observed in \SI{9.28}{years} of live time, binned in the same scheme, is shown in \cref{fig:data_3d_hist}\DIFaddbegin \DIFadd{.
+}\DIFaddend 
 
 \begin{figure*}[h]
     \includegraphics[width=\textwidth]{all_background.png}
@@ -1657,12 +1644,12 @@ To compare the bin-wise expectations to the data, a modified $\chi^2$ is used as
     \label{eq:mod-chi2-hnl}
 \end{equation}
 where $N^{\rm{exp}}_i = N^{\mathrm{\nu}}_i + N^{\mathrm{\mu}}_i + N^{\mathrm{HNL}}_i$ is the total event expectation in bin $i$, with $N^{\mathrm{\nu}}_i$, $N^{\mathrm{\mu}}_i$, and $N^{\mathrm{HNL}}_i$ being the expected number of events from neutrinos, atmospheric $\mu$'s, and HNLs, and $N^{\mathrm{obs}}_i$ is the observed number of data events.
-\DIFdelbegin \DIFdel{Recall that the mixing matrix element $|U_{\tau 4}|^2$ enters in both the $N_i^{\rm HNL}$ term as well as the $\nu_\tau$ NC component of the background term $N_i^\nu$.
+\DIFaddbegin \DIFadd{Recall that the mixing matrix element $|U_{\tau 4}|^2$ enters in both the $N_i^{\rm HNL}$ term as well as the $\nu_\tau$ NC component of the background term $N_i^\nu$.
 The latter specifically scales as
-}\begin{displaymath}
-    \DIFdel{N_i^{\nu_\tau{\rm NC}}(|U_{\tau 4}|^2) = (1 - |U_{\tau 4}|^2) N_i^{\nu_\tau{\rm NC}}(|U_{\tau 4}|^2 = 0).
-}\end{displaymath}%DIFAUXCMD
-\DIFdelend Summing the weights of all events of a particular type gives the expected number of events as $N^{\mathrm{type}}_i = \sum_i^\rm{type}\omega_i$, with the statistical uncertainty being $(\sigma^{\mathrm{type}}_i)^2 = \sum_i^\rm{type}\omega_i^2$, which is included in the fit metric to account for the limited MC statistics. A Gaussian penalty is added for each systematic parameter, $s_j$, with a known uncertainty, forming the additional term in \cref{eq:mod-chi2-hnl}. The nominal value of the parameter is given by $\hat{s_j}$, with a prior width of $\sigma_{s_j}$. The systematic uncertainties that are included as nuisance parameters in the fit are discussed in detail in \cref{sec:uncertainties}. Both their nominal values and priors (if applicable) are listed in the first column of \cref{tab:best_fit_parameters}.
+}\begin{equation}
+    \DIFadd{N_i^{\nu_\tau{\rm NC}}(|U_{\tau 4}|^2) = (1 - |U_{\tau 4}|^2) N_i^{\nu_\tau{\rm NC}}(|U_{\tau 4}|^2 = 0).
+}\end{equation}
+\DIFaddend Summing the weights of all events of a particular type gives the expected number of events as $N^{\mathrm{type}}_i = \sum_i^\rm{type}\omega_i$, with the statistical uncertainty being $(\sigma^{\mathrm{type}}_i)^2 = \sum_i^\rm{type}\omega_i^2$, which is included in the fit metric to account for the limited MC statistics. A Gaussian penalty is added for each systematic parameter, $s_j$, with a known uncertainty, forming the additional term in \cref{eq:mod-chi2-hnl}. The nominal value of the parameter is given by $\hat{s_j}$, with a prior width of $\sigma_{s_j}$. The systematic uncertainties that are included as nuisance parameters in the fit are discussed in detail in \cref{sec:uncertainties}. Both their nominal values and priors (if applicable) are listed in the first column of \cref{tab:best_fit_parameters}.
 
 To conduct the fit, we use the \textsc{PISA}~\cite{pisa_paper, pisa_software} software framework.
 It was explicitly designed to perform analyses of small signals in high-statistics experiments and is employed to generate the expected event distributions from several MC samples, compare them to the observed data, and perform the minimization.
@@ -1690,12 +1677,12 @@ The fits always recover the true physics parameter within the minimizer toleranc
 
 \subsection{\label{sec:uncertainties} Systematic Uncertainties}
 
-The included nuisance parameters stem from several sources of systematic uncertainties related to both event generation and detector response. Following the work presented in Ref.~\cite{IceCubeCollaboration:2023wtb}, the physical models are used to implement the uncertainties on event distributions, resulting from varying these systematic parameters. For the cases where no analytical description is available, effective parameters, calculated based on Monte \DIFdelbegin \DIFdel{Carlo }\DIFdelend \DIFaddbegin \DIFadd{Carlos }\DIFaddend simulations, are used. We list here only the systematic uncertainties that were found to be relevant for this analysis, while all other parameters are kept fixed at their nominal values~\cite{Fischer_2023}.
+The included nuisance parameters stem from several sources of systematic uncertainties related to both event generation and detector response. Following the work presented in Ref.~\cite{IceCubeCollaboration:2023wtb}, the physical models are used to implement the uncertainties on event distributions, resulting from varying these systematic parameters. For the cases where no analytical description is available, effective parameters, calculated based on Monte \DIFdelbegin \DIFdel{Carlos }\DIFdelend \DIFaddbegin \DIFadd{Carlo }\DIFaddend simulations, are used. We list here only the systematic uncertainties that were found to be relevant for this analysis, while all other parameters are kept fixed at their nominal values~\cite{Fischer_2023}.
 
-All uncertainties that scale the total neutrino expectation are included in a single scaling parameter $N_{\nu}$, because the analysis is primarily sensitive to \DIFdelbegin \DIFdel{shape difference between HNL and neutrino eventswithin the PID and $\cos(\textrm{zenith})$ bins.
+All uncertainties that scale the total neutrino expectation are included in a single scaling parameter $N_{\nu}$, because the analysis is primarily sensitive to \DIFdelbegin \DIFdel{the relative distribution of events , while the total flux of neutrinos is not relevant for the measurement itself.
+}\DIFdelend \DIFaddbegin \DIFadd{shape difference between HNL and neutrino events within the PID and $\cos(\textrm{zenith})$ bins.
 The total event rate is not an important factor in the results presented here. Finally, a weight is applied to the $\nu_{\tau}$ neutral-current event expectation to account for the reduction in event rate commensurate with HNL production.
 Specifically, the $\nu_\tau$ NC cross section is reduced by a factor $(1 - |U_{\tau 4}|^2)$ to preserve unitarity.
-}\DIFdelend \DIFaddbegin \DIFadd{the relative distribution of events, while the total flux of neutrinos is not relevant for the measurement itself.
 }\DIFaddend Three parameters, $h_{\pi^+}$, $i_{\pi^+}$, and $y_{K^+}$, are used to account for the uncertainties in the pion and kaon production in the atmosphere, which are the dominant sources of neutrino production at the energies considered in this work.
 They are a selection of the effective parameters introduced in Ref.~\cite{Barr:2006it} and are constrained by Gaussian priors.
 The remaining parameters in this parameterization were found to have a negligible impact on the analysis and are fixed to their nominal values.
@@ -1762,22 +1749,17 @@ They are all compatible with the null hypothesis (NH) of no mixing, i.e., $\noma
         %\SI{1.0}{\gev} & 0.106 & 0.24 & 0.40 & \SI{0.63}{} \\
        % \hline
         \hline\hline
-       \textbf{HNL mass} & \textbf{\ut4} & \textbf{68\% CL} & \textbf{90\% CL} \DIFdelbeginFL %DIFDELCMD < & %%%
-\textbf{\DIFdelFL{NH $p$-value}}  %DIFAUXCMD
-\DIFdelendFL \\    
+       \textbf{HNL mass} & \textbf{\ut4} & \textbf{68\% CL} & \textbf{90\% CL} \DIFaddbeginFL & \textbf{\DIFaddFL{NH $p$-value}}  \DIFaddendFL \\    
        \hline\hline
-       \SI{0.3}{\gev} & 0.001 & 0.08 & \DIFdelbeginFL \DIFdelFL{0.17  }%DIFDELCMD < & %%%
-\DIFdelFL{\mbox{%DIFAUXCMD
+       \SI{0.3}{\gev} & 0.001 & 0.08 & \DIFdelbeginFL \DIFdelFL{0.67  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{0.17  }& \DIFaddFL{\mbox{%DIFAUXCMD
 \SI{0.44}{}}\hskip0pt%DIFAUXCMD
-}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{0.67  }\DIFaddendFL \\
-        \SI{0.6}{\gev} & \DIFdelbeginFL \DIFdelFL{$8 \times 10^{-5}$ }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{8 \times 10^{-5} }\DIFaddendFL & 0.22 & 0.36  \DIFdelbeginFL %DIFDELCMD < & %%%
-\DIFdelFL{\mbox{%DIFAUXCMD
+}\DIFaddendFL \\
+        \SI{0.6}{\gev} & \DIFdelbeginFL \DIFdelFL{$8 \times 10^{-5}$}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$8 \times 10^{-5}$ }\DIFaddendFL & 0.22 & 0.36  \DIFaddbeginFL & \DIFaddFL{\mbox{%DIFAUXCMD
 \SI{0.39}{}}\hskip0pt%DIFAUXCMD
-}\DIFdelendFL \\
-        \SI{1.0}{\gev} & 0.054 & \DIFdelbeginFL \DIFdelFL{0.27 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{0.22 }\DIFaddendFL & 0.44  \DIFdelbeginFL %DIFDELCMD < & %%%
-\DIFdelFL{\mbox{%DIFAUXCMD
+}\DIFaddendFL \\
+        \SI{1.0}{\gev} & 0.054 & \DIFdelbeginFL \DIFdelFL{0.22 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{0.27 }\DIFaddendFL & 0.44 \DIFaddbeginFL & \DIFaddFL{\mbox{%DIFAUXCMD
 \SI{0.44}{} }\hskip0pt%DIFAUXCMD
-}\DIFdelendFL \\
+}\DIFaddendFL \\
        \hline
     \end{tabular}
     \caption{Best-fit mixing values and the corresponding upper limits at the \SI{68}{\percent} and the \SI{90}{\percent} confidence level, as well as the $p$-value to reject the null hypothesis, estimated using Wilks' theorem.}
@@ -1801,7 +1783,7 @@ As expected by the nature of the production from $\nu_\tau$ oscillations, the si
     \textbf{Parameter} & \textbf{Nominal} & \multicolumn{3}{c}{\textbf{Best-Fit / \textit{Pull} [\si{\sigma}]}} \\ 
     m$_{4}$ (fixed) & - & \textbf{\SI{0.3}{\gev}} & \textbf{\SI{0.6}{\gev}} &  \textbf{\SI{1.0}{\gev}} \\ 
     \hline\hline
-    $|U_{\tau 4}|^2$                                 & -                    & 0.001               & 8 \times 10^{-5}               & 0.054               \\
+    $|U_{\tau 4}|^2$                                 & -                    & 0.001               & $8 \times 10^{-5}$               & 0.054               \\
     \hline
 
     $\theta_{23} [\si{\degree}]$                     &   47.500          &          48.117 &          47.919 &          48.011 \\ 
