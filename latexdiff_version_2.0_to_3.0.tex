@@ -1,7 +1,7 @@
 \documentclass[
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL /Users/nickkamp/Downloads/IceCubeFirstHNL_PRD_v2.0a/hnl_prd_main.tex   Tue Jan 13 09:36:48 2026
-%DIF ADD hnl_prd_main.tex                                                       Thu Aug 13 15:34:40 2026
+%DIF DEL /Users/nickkamp/Downloads/IceCubeFirstHNL_PRD_v2.0a/hnl_prd_main.tex   Tue Jan 13 03:36:48 2026
+%DIF ADD hnl_prd_main.tex                                                       Fri Sep 25 12:47:35 2026
     aps,
     prd,
     reprint,
@@ -1111,7 +1111,7 @@
 \begin{abstract}
 
 The observation of neutrino oscillations has established that neutrinos have non-zero masses. This phenomenon is not explained by the Standard Model of particle physics, but one viable explanation to this dilemma involves the existence of heavy neutral leptons in the form of right-handed neutrinos. This work presents the first search for heavy neutral leptons with the IceCube Neutrino Observatory. The standard three flavor neutrino model is extended by adding a fourth GeV-scale mass state allowing mixing with the $\tau$ sector through the parameter \ut4. The analysis is performed by searching for signatures of heavy neutral leptons that are directly produced via up-scattering of atmospheric $\nu_\tau$'s inside the IceCube detection volume.
-Three heavy neutral lepton mass values, $m_4$, of \SI{0.3}{\gev}, \SI{0.6}{\gev}, and \SI{1.0}{\gev} are tested using ten years of data, collected between 2011 and 2021. No significant signal of heavy neutral leptons is observed for any of the tested masses. The resulting constraints for the mixing parameter are $\nomathut4 < 0.67\;(m_4 = \SI{0.3}{\gev})$, $\nomathut4 < 0.36\;(m_4 = \SI{0.6}{\gev})$, and $\nomathut4 < 0.44\;(m_4 = \SI{1.0}{\gev})$ at the \SI{90}{\percent} confidence level. This analysis serves as proof-of-concept for heavy neutral lepton searches in IceCube. The heavy neutral lepton event generator, developed in this work, and the analysis of the expected signatures lay the fundamental groundwork for future searches thereof.
+Three heavy neutral lepton mass values, $m_4$, of \SI{0.3}{\gev}, \SI{0.6}{\gev}, and \SI{1.0}{\gev} are tested using ten years of data, collected between 2011 and 2021. No significant signal of heavy neutral leptons is observed for any of the tested masses. The resulting constraints for the mixing parameter are \DIFdelbegin \DIFdel{$\nomathut4 < 0.67\;(m_4 = \SI{0.3}{\gev})$}\DIFdelend \DIFaddbegin \DIFadd{$\nomathut4 < 0.17\;(m_4 = \SI{0.3}{\gev})$}\DIFaddend , $\nomathut4 < 0.36\;(m_4 = \SI{0.6}{\gev})$, and $\nomathut4 < 0.44\;(m_4 = \SI{1.0}{\gev})$ at the \SI{90}{\percent} confidence level. This analysis serves as proof-of-concept for heavy neutral lepton searches in IceCube. The heavy neutral lepton event generator, developed in this work, and the analysis of the expected signatures lay the fundamental groundwork for future searches thereof.
 
 \end{abstract}
 
@@ -1140,8 +1140,9 @@ If some of them are heavy (in the GeV regime) and some of them are light, as mot
 they could explain both the origin of neutrinos masses, while also providing a dark matter candidate. This work will therefore focus on HNLs in the GeV regime.
 
 An HNL can be produced from the interactions of neutrinos through the weak force, since an HNL has a small component of left-handed neutrino flavors, leading to \textit{weaker-than-weak} interactions contributing to their production and decay.
-Since HNL mixing with active neutrinos is presumed to be small, as it is yet unobserved, this leads to long HNL lifetimes barring the existence of new forces..
-In this article, we consider the production of HNLs from high-energy atmospheric neutrinos interacting in the Antarctic ice, with subsequent decay of the HNLs, which could be detected with the IceCube Neutrino Observatory~\cite{IceCube:2016zyt}, a possibility first considered in Ref.~\cite{Coloma:2017ppo}.
+Since HNL mixing with active neutrinos is presumed to be small, as it is yet unobserved, this leads to long HNL lifetimes barring the existence of new forces.
+\DIFdelbegin \DIFdel{.
+}\DIFdelend In this article, we consider the production of HNLs from high-energy atmospheric neutrinos interacting in the Antarctic ice, with subsequent decay of the HNLs, which could be detected with the IceCube Neutrino Observatory~\cite{IceCube:2016zyt}, a possibility first considered in Ref.~\cite{Coloma:2017ppo}.
 
 The article is organized as follows.
 First, we discuss potential HNL signals and proposals of how to search for them in \cref{sec:hnl_signals}.
@@ -1163,7 +1164,7 @@ Finally, in \cref{sec:conclusion} we conclude and discuss prospects for future H
 
 Searches for HNLs have been pursued since almost half a century~\cite{Abdullahi:2022jlv} based on various underlying models~\cite{Fernandez-Martinez:2023phj}. On top of the HNL production from protons interacting on a target or a beam dump, many searches utilized the fact that the produced HNL propagates undisturbed and unobserved before decaying back into SM particles, leading to spurious decay signatures or displaced vertices. Noteworthy experimental results at extracted beamlines are from \textit{CHARM}~\cite{CHARM:1983ayi, Orloff:2002de, Boiarska:2021yho}, \textit{NOMAD}~\cite{NOMAD:2001eyx}, and \textit{BEBC}~\cite{Barouki:2022bkt, BEBC_OG_COOPERSARKAR1985207}. At colliders, searches for HNLs are performed using prompt and displaced decays such as at with \textit{ATLAS}~\cite{ATLAS:2019kpx, atlas_2022_HNL_PhysRevLett.131.061803}, \textit{CMS}~\cite{CMS:2018iaf, CMS:2022fut}, and \textit{LHCb}~\cite{LHCb:2020wxx}, or using hadronic Z$^0$ decays like with \textit{DELPHI}~\cite{DELPHI:1996qcc}. For a thorough review of all searches for feebly-interacting particles, please refer to Ref.~\cite{Agrawal:2021dbo}.
 
-Concerning searches for HNLs in atmospheric neutrino experiments, in addition to previously mentioned Ref.~\cite{Coloma:2017ppo}, Refs.~\cite{Boiarska:2021yho,Coloma:2019htx,Arguelles:2019ziu} also propose searches leveraging the Production of HNLs from the decay of mesons. In particular, Ref.~\cite{Boiarska:2021yho} proposes to look for HNLs using down-going events in IceCube and KM3NeT, an ocean-based neutrino telescope.
+Concerning searches for HNLs in atmospheric neutrino experiments, in addition to previously mentioned Ref.~\cite{Coloma:2017ppo}, Refs.~\cite{Boiarska:2021yho,Coloma:2019htx,Arguelles:2019ziu} also propose searches leveraging the \DIFdelbegin \DIFdel{Production }\DIFdelend \DIFaddbegin \DIFadd{production }\DIFaddend of HNLs from the decay of mesons. In particular, Ref.~\cite{Boiarska:2021yho} proposes to look for HNLs using down-going events in IceCube and KM3NeT, an ocean-based neutrino telescope.
 We do not follow these proposals because of the large downward-going muon background at these energies and the systematic uncertainties associated with D-meson production in the atmosphere.
 In particular, when considering only upward-going events, those that traverse through the Earth, and HNLs in the GeV-scale, the production of meson decay is a sub-leading production mechanism compared to the one proposed in Ref.~\cite{Coloma:2017ppo}.
 An additional unique advantage of looking for upward-going events is the access to a relatively large flux of $\nu_\tau$'s produced from the oscillation of $\nu_\mu$'s with energies in the tens of GeVs~\cite{IceCubeCollaboration:2023wtb}, where the neutrino cross-section is well-described by deep-inelastic scattering (DIS)~\cite{Formaggio:2012cpf}.
@@ -1325,7 +1326,9 @@ The decay products are calculated in the rest frame of the HNL, and are then boo
 \subsection{Event Generation}
 
 To simulate events, the LI settings have to be specified, which includes selecting the injection mode (ranged or volume), the Earth's density profile, the cross-section model, and the initial and final particle types.
-For this analysis, LI-HNL is run in volume mode, and two generators are used to produce half of the events from $\nu_\tau$ and the other half from $\bar{\nu}_\tau$ as the primary particle. Volume mode injects the primary particles within a cylindrical volume, where the center and the dimension are chosen at runtime. Here, the volume is chosen to be centered in the DeepCore sub-array, and we produce samples with masses of \SI{0.1}{\gev}, \DIFdelbegin \DIFdel{\mbox{\SI{0.3}{\gev}}}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+For this analysis, LI-HNL is run in volume mode, and two generators are used to produce half of the events from $\nu_\tau$ and the other half from $\bar{\nu}_\tau$ as the primary particle. Volume mode injects the primary particles within a cylindrical volume, where the center and the dimension are chosen at runtime. Here, the volume is chosen to be centered in the DeepCore sub-array, and we produce samples with masses of \SI{0.1}{\gev}, \DIFdelbegin \DIFdel{SI}%DIFDELCMD < {%%%
+\DIFdel{0.3}%DIFDELCMD < }{\gev}%%%
+\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
 \SI{0.3}{\gev}}\hskip0pt%DIFAUXCMD
 }\DIFaddend , \SI{0.6}{\gev}, and \SI{1.0}{\gev}. The 0.1 GeV sample was excluded from the final analysis due to the dominance of the invisible 3-neutrino decay mode, which pushed the vast majority of events simulated below DeepCore’s energy detection threshold.
 
@@ -1496,7 +1499,7 @@ In an attempt to identify HNL events over the SM background from neutrinos and $
 Theoretically, HNLs can produce a unique, low-energy double-cascade signature. Despite this fact, it was not possible to properly reconstruct them with the current selection and reconstruction tools available. Due to the lack of an effective reconstruction, we could then not classify the double-cascade events in a separate morphological category, to perform an analysis searching for occurrences of this unique signature. However, during this process it was identified that most of the events are observed as single cascades in our detector.
 These events are observed together with the SM background of atmospheric neutrino and $\mu$ events. For this reason, an analysis scheme was revised that searches for this shift in distribution of mostly cascade-like events, without the need of explicitly identifying the events stemming from the BSM process.
 In this alternative avenue to perform the search for HNLs, the standard reconstruction used for low-energy atmospheric neutrinos is applied to all events, including the signal MC, to perform a forward-folding-style analysis. %In the case of a non-zero \ut4, this results in an excess of events from HNLs, observed on top of the expected events from SM interactions of atmospheric neutrinos and $\mu$'s which can be used to investigate the $m_4$-\ut4 space.
-In the case of a non-zero \ut4, this results in an shift of events from SM neutral-current tau-neutrino interactions to HNLs, which have different energy and zenith distributions compared to the SM case. We use this shift to investigate the $m_4$-\ut4 space.
+In the case of a non-zero \ut4, this results in \DIFdelbegin \DIFdel{an }\DIFdelend \DIFaddbegin \DIFadd{a }\DIFaddend shift of events from SM neutral-current tau-neutrino interactions to HNLs, which have different energy and zenith distributions compared to the SM case. We use this shift to investigate the $m_4$-\ut4 space.
 
 In this section, we first describe the final sample selection before introducing the binning scheme and the resulting background and signal shapes. After describing the fit method, the included systematic uncertainties are discussed at the end of the section.
 
@@ -1754,7 +1757,7 @@ They are all compatible with the null hypothesis (NH) of no mixing, i.e., $\noma
        \SI{0.3}{\gev} & 0.001 & 0.08 & \DIFdelbeginFL \DIFdelFL{0.67  }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{0.17  }& \DIFaddFL{\mbox{%DIFAUXCMD
 \SI{0.44}{}}\hskip0pt%DIFAUXCMD
 }\DIFaddendFL \\
-        \SI{0.6}{\gev} & \DIFdelbeginFL \DIFdelFL{$8 \times 10^{-5}$}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$8 \times 10^{-5}$ }\DIFaddendFL & 0.22 & 0.36  \DIFaddbeginFL & \DIFaddFL{\mbox{%DIFAUXCMD
+        \SI{0.6}{\gev} & \DIFdelbeginFL \DIFdelFL{$8 \times 10^{-5}$ }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$8 \times 10^{-5}$ }\DIFaddendFL & 0.22 & 0.36  \DIFaddbeginFL & \DIFaddFL{\mbox{%DIFAUXCMD
 \SI{0.39}{}}\hskip0pt%DIFAUXCMD
 }\DIFaddendFL \\
         \SI{1.0}{\gev} & 0.054 & \DIFdelbeginFL \DIFdelFL{0.22 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{0.27 }\DIFaddendFL & 0.44 \DIFaddbeginFL & \DIFaddFL{\mbox{%DIFAUXCMD
@@ -1765,7 +1768,11 @@ They are all compatible with the null hypothesis (NH) of no mixing, i.e., $\noma
     \caption{Best-fit mixing values and the corresponding upper limits at the \SI{68}{\percent} and the \SI{90}{\percent} confidence level, as well as the $p$-value to reject the null hypothesis, estimated using Wilks' theorem.}
     \label{tab:best_fit_parameters_and_confidence_levels}
 \end{table}
-The observed test statistic (TS) profiles are shown in \cref{fig:brazil_bands}. The TS is calculated as the $\Delta\chi^2_{\mathrm{mod}}$ between a free fit and a fit where the mixing is fixed to a best fit mixing, using $\chi^2_{\mathrm{mod}}$ as defined in \ref{eq:mod-chi2-hnl}, and the best-fit points shown in \ref{tab:best_fit_parameters_and_confidence_levels}.
+The observed test statistic (TS) profiles are shown in \cref{fig:brazil_bands}. The TS is calculated as the $\Delta\chi^2_{\mathrm{mod}}$ between a free fit and a fit where the mixing is fixed to a best fit mixing, using $\chi^2_{\mathrm{mod}}$ as defined in \DIFdelbegin \DIFdel{\ref{eq:mod-chi2-hnl}}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cref{eq:mod-chi2-hnl}}\hskip0pt%DIFAUXCMD
+}\DIFaddend , and the best-fit points shown in \DIFdelbegin \DIFdel{\ref{tab:best_fit_parameters_and_confidence_levels}}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cref{tab:best_fit_parameters_and_confidence_levels}}\hskip0pt%DIFAUXCMD
+}\DIFaddend .
 The expected Asimov profile and its fluctuations based on 100 pseudo-data trials are also shown, where the pseudo-data was generated assuming the best-fit physics and nuisance parameters, fluctuating the bin counts according to Poisson statistics and the MC statistical uncertainty.
 Because the data are consistent with the null, these can be interpreted as indicating 'preferred regions' in the one-dimensional mixing space of [0, upper bound] for a given confidence level.
 
@@ -1783,7 +1790,7 @@ As expected by the nature of the production from $\nu_\tau$ oscillations, the si
     \textbf{Parameter} & \textbf{Nominal} & \multicolumn{3}{c}{\textbf{Best-Fit / \textit{Pull} [\si{\sigma}]}} \\ 
     m$_{4}$ (fixed) & - & \textbf{\SI{0.3}{\gev}} & \textbf{\SI{0.6}{\gev}} &  \textbf{\SI{1.0}{\gev}} \\ 
     \hline\hline
-    $|U_{\tau 4}|^2$                                 & -                    & 0.001               & $8 \times 10^{-5}$               & 0.054               \\
+    $|U_{\tau 4}|^2$                                 & -                    & 0.001               & $8 \times 10^{-5}$             & 0.054               \\
     \hline
 
     $\theta_{23} [\si{\degree}]$                     &   47.500          &          48.117 &          47.919 &          48.011 \\ 
@@ -1836,7 +1843,7 @@ This agreement is expected, given that the same sample is used in both analyses,
     % \includegraphics[width=\columnwidth]{bfp_3d_binwise_pull_0.3_GeV.pdf}
     \includegraphics[width=\columnwidth]{bfp_3d_binwise_pull_0.6_GeV.pdf}
     % \includegraphics[width=\columnwidth]{bfp_3d_binwise_pull_1.0_GeV.pdf}
-    	\caption{Three-dimensional bin-wise pulls between data and simulation for a $|U_{\tau 4}|^2$ (\SI{0.6}{\gev})  = 0.8 sample fit.}
+    	\caption{Three-dimensional bin-wise pulls between data and simulation for a $|U_{\tau 4}|^2$ (\SI{0.6}{\gev}) = \DIFdelbeginFL \DIFdelFL{0.8 }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$8 \times 10^{-5}$ }\DIFaddendFL sample fit.}
     \label{fig:3_d_bfp_pull_0.6_GeV}
 \end{figure}
 
@@ -1855,7 +1862,7 @@ Given these findings, we instead perform an analysis looking for excess events i
 
 Our analysis focused on three masses: \SI{0.3}{\gev}, \SI{0.6}{\gev}, and \SI{1.0}{\gev}. 
 The best-fit point at each mass was found to be consistent with the null hypothesis of no HNL mixing.
-We place upper limits on the $\tau$-mixing of HNLs at $\nomathut4 < 0.19\;(m_4 = \SI{0.3}{\gev})$, $\nomathut4 < 0.36\;(m_4 = \SI{0.6}{\gev})$, and $\nomathut4 < 0.40\;(m_4 = \SI{1.0}{\gev})$ at the \SI{90}{\percent} confidence level.
+We place upper limits on the $\tau$-mixing of HNLs at \DIFdelbegin \DIFdel{$\nomathut4 < 0.19\;(m_4 = \SI{0.3}{\gev})$}\DIFdelend \DIFaddbegin \DIFadd{$\nomathut4 < 0.17\;(m_4 = \SI{0.3}{\gev})$}\DIFaddend , $\nomathut4 < 0.36\;(m_4 = \SI{0.6}{\gev})$, and \DIFdelbegin \DIFdel{$\nomathut4 < 0.40\;(m_4 = \SI{1.0}{\gev})$ }\DIFdelend \DIFaddbegin \DIFadd{$\nomathut4 < 0.44\;(m_4 = \SI{1.0}{\gev})$ }\DIFaddend at the \SI{90}{\percent} confidence level.
 Despite these constraints being several orders of magnitude below the current leading limits on \ut4 from reinterpretations of the CHARM and the BEBC results, which are at the order of $10^{-3}$ to $10^{-6}$ in the \SIrange{0.1}{2}{\gev} range~\cite{Orloff:2002de, Boiarska:2021yho, Barouki:2022bkt}, this initial result serves as a successful \textit{proof-of-concept} for HNL searches both in IceCube in particular and using atmospheric neutrinos in general.
 Lastly, the future low-energy extension IceCube Upgrade~\cite{Ishihara:2019aao} will significantly improve the sensitivity to low-energy events through reduced spacing and segmented directionality of the optical modules.
 This enhances light detection and should yield a better chance of identifying the unique HNL signature, which will be the target of future work.
